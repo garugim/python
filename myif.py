@@ -3,39 +3,82 @@
 # 만약에 2를 입력하면 2번 캐릭터 출력
 # 3을 입렵하면 3번 캐릭터 출력
 # 잘못입력하면 잘못 입렷했다고 출력
-while True:
-    print("그림 출력 프로그램")
-    print("~~~~~~~~~~~~~~~~")
-    print("1. 큰 2022")
-    print("2. 고양이")
-    print("3. 경례 이모티콘")
-    print("~~~~~~~~~~~~~~~~")
-    print("0. 프로그램 종료")
-    v = int(input("선택: "))
 
-    if v == 1:
-        print("큰 2022")
-        print("┏┓┏┓┏┓┏┓")
-        print("┏┛┃┃┏┛┏┛")
-        print("┗┛┗┛┗┛┗┛")
+def play_game_1():
+    for v in range(5):
+        print("5번 반복하는 그림 출력 프로그램")
+        print("~~~~~~~~~~~~~~~~")
+        print("1. 큰 2022")
+        print("2. 고양이")
+        print("3. 경례 이모티콘")
+        print("~~~~~~~~~~~~~~~~")
+        
+        # 입력값을 정수로 변환
+        try:
+            v = int(input("선택: "))
+        except ValueError:
+            print("숫자를 입력해주세요!")
+            continue
 
-    elif v == 2:
-        print("고양이 그림")
-        print(" ^ _ ^ ")
-        print("( o.o )")
-        print(" > ^ < ")
+        if v == 1:
+            print("큰 2022")
+            print("┏┓┏┓┏┓┏┓")
+            print("┏┛┃┃┏┛┏┛")
+            print("┗┛┗┛┗┛┗┛")
+        elif v == 2:
+            print("고양이 그림")
+            print(" ^ _ ^ ")
+            print("( o.o )")
+            print(" > ^ < ")
+        elif v == 3:
+            print("경례 이모티콘")
+            print("/(ovo)>")
+        else:
+            print("잘못 입력하셨습니다")
 
-    elif v == 3:
-        print("경례 이모티콘")
-        print("/(ovo)>")
+def play_game_2():
+    while True:
+        print("무한히 반복하는 그림 출력 프로그램")
+        print("~~~~~~~~~~~~~~~~")
+        print("1. 큰 2022")
+        print("2. 고양이")
+        print("3. 경례 이모티콘")
+        print("~~~~~~~~~~~~~~~~")
+        print("0. 프로그램 종료")
+        
+        # 입력값을 정수로 변환
+        try:
+            v = int(input("선택: "))
+        except ValueError:
+            print("숫자를 입력해주세요!")
+            continue
 
-    elif v == 0:
-        print("프로그램을 종료합니다")
-        break
+        if v == 1:
+            print("큰 2022")
+            print("┏┓┏┓┏┓┏┓")
+            print("┏┛┃┃┏┛┏┛")
+            print("┗┛┗┛┗┛┗┛")
+        elif v == 2:
+            print("고양이 그림")
+            print(" ^ _ ^ ")
+            print("( o.o )")
+            print(" > ^ < ")
+        elif v == 3:
+            print("경례 이모티콘")
+            print("/(ovo)>")
+        elif v == 0:
+            print("프로그램을 종료합니다")
+            break
+        else:
+            print("잘못 입력하셨습니다")
 
 
-    else:
-        print("잘못 입력하셨습니다")
+play_game_1()
+
+play_game_2()
+
+
+
 
 
 # while True: << 이걸로 루프 돌리는게 가장 이상적임
