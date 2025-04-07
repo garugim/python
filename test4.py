@@ -26,3 +26,5 @@ print(f"두 수를 더한 값: {r}")  # f-string으로 변수 값 출력
 
 r = cal(2, 1, "-")
 print(f"두 수를 뺀 값: {r}")  # 'peint' 오타를 'print'로 수정
+
+#
